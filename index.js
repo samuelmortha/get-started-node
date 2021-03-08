@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/welcome-api-123',(req,res)=>{
+  console.log(`CONSOLE LOG @ ${new Date().toISOString()}`);
+  console.info(`CONSOLE info @ ${new Date().toISOString()}`);
+  console.error(`CONSOLE ERror @ ${new Date().toISOString()}`);
   res.send(`Welcome-api-123 @ ${new Date().toISOString()}`)
 })
 
